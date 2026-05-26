@@ -13,6 +13,10 @@
   </url><url>
     <loc>https://example.org/categories/</loc>
   </url><url>
+    <loc>https://example.org/life/</loc>
+  </url><url>
     <loc>https://example.org/tags/</loc>
+  </url><url>
+    <loc>https://example.org/tech/</loc>
   </url>
 </urlset>
