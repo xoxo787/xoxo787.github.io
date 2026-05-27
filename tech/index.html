@@ -7,7 +7,7 @@
     <title>태용의 개발 기록과 삶의 기록</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.161.0">
+    <meta name="generator" content="Hugo 0.162.0">
     
     
     
@@ -38,14 +38,16 @@
     
     
     <meta property="og:url" content="https://example.org/tech/">
-  <meta property="og:site_name" content="태용의 개발 기록과 삶의 기록">
-  <meta property="og:title" content="Teches">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="website">
+	<meta property="og:site_name" content="태용의 개발 기록과 삶의 기록">
+	<meta property="og:title" content="Teches">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="website">
 
-  <meta itemprop="name" content="Teches">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Teches">
+	<meta itemprop="name" content="Teches">
+	<meta itemprop="datePublished" content="2026-05-26T23:05:00+09:00">
+	<meta itemprop="dateModified" content="2026-05-26T23:05:00+09:00">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Teches">
 
       
       
@@ -118,6 +120,49 @@
   <article class="pa3 pa4-ns nested-copy-line-height">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links mid-gray"></section>
     <section class="flex-ns mt5 flex-wrap justify-around">
+      
+        <div class="w-100 w-30-l mb4 relative bg-white">
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
+    <span class="f6 db">Teches</span>
+    <h1 class="f3 near-black">
+      <a href="/tech/hugo-multi-category-and-image/" class="link black dim">
+        Hugo 독립 블로그 멀티 카테고리 분리 및 이미지 자산 매핑 시스템 구축기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>## 1. 아키텍처 확장 배경 (Problem &amp; Objectives)</p>
+<p>단일 타임라인(<code>posts</code>)으로 운영되던 기존 정적 블로그 구조에서 벗어나, 전문적인 **&lsquo;기술 기록(Tech)&rsquo;**의 영역과 인간적인 **&lsquo;삶의 기록(Life)&rsquo;**이라는 이종(異種)의 데이터 레이어를 논리적으로 완전 격리하고, 본문 내부에 깨짐 없는 정적 이미지 자산(Asset)을 무손실 매핑할 수 있는 독립형 정보 아키텍처(Information Architecture) 구축을 목표로 합니다.</p>
+<p>## 2. 디렉터리 기반 라우팅 설계 (Directory-based Routing)</p>
+<p>Hugo 프레임워크의 엄격한 데이터 스키마 규칙을 준수하여, <code>content</code> 부모 보관함 하위에 독립된 서브 디렉터리를 생성함으로써 물리적·논리적 라우팅 경로를 분리했습니다.</p>
+    </div>
+    <a href="/tech/hugo-multi-category-and-image/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="w-100 w-30-l mb4 relative bg-white">
+          <div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
+    <span class="f6 db">Teches</span>
+    <h1 class="f3 near-black">
+      <a href="/tech/my-first-troubleshooting/" class="link black dim">
+        Git Submodule 에러와 구글 애널리틱스 연동 트러블슈팅기
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>## 1. 문제 상황 (Background)</p>
+<p>Hugo를 활용해 GitHub Pages 블로그를 구축하고 구글 애널리틱스를 연동하는 과정에서, Git Submodule 명령어가 거부되고 <code>Repository not found</code> 및 <code>A git directory for 'public' is found locally</code> 등의 연쇄적인 에러를 마주했습니다.</p>
+<p>## 2. 원인 분석 (Root Cause)</p>
+<p>* **경로 및 동기화 에러:** Windows의 OneDrive 및 한글 경로가 포함된 바탕화면은 CLI 도구와 충돌을 유발했습니다.</p>
+<p>* **식별자 불일치:** GitHub 저장소 생성 시 <code>xoxo787.github.io</code> 규격을 지키지 않고 <code>github.io</code>로 잘못 생성하여 터미널이 대상을 찾지 못했습니다.</p>
+    </div>
+    <a href="/tech/my-first-troubleshooting/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
       
     </section>
     </article>

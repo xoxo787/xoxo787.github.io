@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Teches on 태용의 개발 기록과 삶의 기록</title>
-    <link>https://example.org/tech/</link>
-    <description>Recent content in Teches on 태용의 개발 기록과 삶의 기록</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="https://example.org/tech/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
+	<channel>
+		<title>Teches on 태용의 개발 기록과 삶의 기록</title>
+		<link>https://example.org/tech/</link>
+		<description>Recent content in Teches on 태용의 개발 기록과 삶의 기록</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 26 May 2026 23:05:00 +0900</lastBuildDate>
+		
+			<atom:link href="https://example.org/tech/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Hugo 독립 블로그 멀티 카테고리 분리 및 이미지 자산 매핑 시스템 구축기</title>
+				<link>https://example.org/tech/hugo-multi-category-and-image/</link>
+				<pubDate>Tue, 26 May 2026 23:05:00 +0900</pubDate>
+				<guid>https://example.org/tech/hugo-multi-category-and-image/</guid>
+				<description>&lt;p&gt;## 1. 아키텍처 확장 배경 (Problem &amp;amp; Objectives)&lt;/p&gt;&#xA;&lt;p&gt;단일 타임라인(&lt;code&gt;posts&lt;/code&gt;)으로 운영되던 기존 정적 블로그 구조에서 벗어나, 전문적인 **&amp;lsquo;기술 기록(Tech)&amp;rsquo;**의 영역과 인간적인 **&amp;lsquo;삶의 기록(Life)&amp;rsquo;**이라는 이종(異種)의 데이터 레이어를 논리적으로 완전 격리하고, 본문 내부에 깨짐 없는 정적 이미지 자산(Asset)을 무손실 매핑할 수 있는 독립형 정보 아키텍처(Information Architecture) 구축을 목표로 합니다.&lt;/p&gt;&#xA;&lt;p&gt;## 2. 디렉터리 기반 라우팅 설계 (Directory-based Routing)&lt;/p&gt;&#xA;&lt;p&gt;Hugo 프레임워크의 엄격한 데이터 스키마 규칙을 준수하여, &lt;code&gt;content&lt;/code&gt; 부모 보관함 하위에 독립된 서브 디렉터리를 생성함으로써 물리적·논리적 라우팅 경로를 분리했습니다.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Git Submodule 에러와 구글 애널리틱스 연동 트러블슈팅기</title>
+				<link>https://example.org/tech/my-first-troubleshooting/</link>
+				<pubDate>Tue, 26 May 2026 22:15:48 +0900</pubDate>
+				<guid>https://example.org/tech/my-first-troubleshooting/</guid>
+				<description>&lt;p&gt;## 1. 문제 상황 (Background)&lt;/p&gt;&#xA;&lt;p&gt;Hugo를 활용해 GitHub Pages 블로그를 구축하고 구글 애널리틱스를 연동하는 과정에서, Git Submodule 명령어가 거부되고 &lt;code&gt;Repository not found&lt;/code&gt; 및 &lt;code&gt;A git directory for &#39;public&#39; is found locally&lt;/code&gt; 등의 연쇄적인 에러를 마주했습니다.&lt;/p&gt;&#xA;&lt;p&gt;## 2. 원인 분석 (Root Cause)&lt;/p&gt;&#xA;&lt;p&gt;* **경로 및 동기화 에러:** Windows의 OneDrive 및 한글 경로가 포함된 바탕화면은 CLI 도구와 충돌을 유발했습니다.&lt;/p&gt;&#xA;&lt;p&gt;* **식별자 불일치:** GitHub 저장소 생성 시 &lt;code&gt;xoxo787.github.io&lt;/code&gt; 규격을 지키지 않고 &lt;code&gt;github.io&lt;/code&gt;로 잘못 생성하여 터미널이 대상을 찾지 못했습니다.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

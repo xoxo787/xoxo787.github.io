@@ -1,14 +1,18 @@
+
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/posts/my-first-troubleshooting/</loc>
-    <lastmod>2026-05-26T22:15:48+09:00</lastmod>
+    <loc>https://example.org/tech/hugo-multi-category-and-image/</loc>
+    <lastmod>2026-05-26T23:05:00+09:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/</loc>
-    <lastmod>2026-05-26T22:15:48+09:00</lastmod>
+    <loc>https://example.org/tech/</loc>
+    <lastmod>2026-05-26T23:05:00+09:00</lastmod>
   </url><url>
     <loc>https://example.org/</loc>
+    <lastmod>2026-05-26T23:05:00+09:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tech/my-first-troubleshooting/</loc>
     <lastmod>2026-05-26T22:15:48+09:00</lastmod>
   </url><url>
     <loc>https://example.org/categories/</loc>
@@ -16,7 +20,5 @@
     <loc>https://example.org/life/</loc>
   </url><url>
     <loc>https://example.org/tags/</loc>
-  </url><url>
-    <loc>https://example.org/tech/</loc>
   </url>
 </urlset>
