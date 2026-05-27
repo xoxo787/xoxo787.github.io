@@ -10,22 +10,29 @@
 		
 		
 		
-			<lastBuildDate>Tue, 26 May 2026 23:05:00 +0900</lastBuildDate>
+			<lastBuildDate>Wed, 27 May 2026 18:19:00 +0900</lastBuildDate>
 		
 			<atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Hugo 독립 블로그 멀티 카테고리 분리 및 이미지 자산 매핑 시스템 구축기</title>
+				<title>깃허브 블로그에 나만의 비밀 일기장 만드는 법 (카테고리 숨기기)</title>
+				<link>https://example.org/tech/hide-my-private-life/</link>
+				<pubDate>Wed, 27 May 2026 18:19:00 +0900</pubDate>
+				<guid>https://example.org/tech/hide-my-private-life/</guid>
+				<description>&lt;p&gt;## 1. 남들에게 보여주기 부끄러운 솔직한 기록들&lt;/p&gt;&#xA;&lt;p&gt;기술 블로그를 운영하다 보면, 가끔은 정돈된 개발 지식 말고 날것 그대로의 감정이나 찌질하고 솔직한 고민들을 적어두고 싶을 때가 있습니다. 하지만 전 세계 누구나 볼 수 있는 인터넷 공간에 내 깊은 속마음을 모두 공개하기는 너무 창피하고 부담스럽죠. 그래서 기술 블로그 안에 나 혼자만 볼 수 있는 &amp;lsquo;비밀 일기장&amp;rsquo; 공간을 숨겨놓는 방법을 적용해 보았습니다.&lt;/p&gt;&#xA;&lt;p&gt;## 2. 마법의 주문: draft = true&lt;/p&gt;&#xA;&lt;p&gt;Hugo 블로그에서는 글을 인터넷에 올릴지 말지를 아주 간단한 단어 하나로 결정할 수 있습니다. 바로 글 맨 위에 있는 설정창의 &lt;code&gt;draft&lt;/code&gt; 속성입니다.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>블로그 카테고리(tech/life) 나누고 이미지 넣는 방법</title>
 				<link>https://example.org/tech/hugo-multi-category-and-image/</link>
 				<pubDate>Tue, 26 May 2026 23:05:00 +0900</pubDate>
 				<guid>https://example.org/tech/hugo-multi-category-and-image/</guid>
-				<description>&lt;p&gt;## 1. 아키텍처 확장 배경 (Problem &amp;amp; Objectives)&lt;/p&gt;&#xA;&lt;p&gt;단일 타임라인(&lt;code&gt;posts&lt;/code&gt;)으로 운영되던 기존 정적 블로그 구조에서 벗어나, 전문적인 **&amp;lsquo;기술 기록(Tech)&amp;rsquo;**의 영역과 인간적인 **&amp;lsquo;삶의 기록(Life)&amp;rsquo;**이라는 이종(異種)의 데이터 레이어를 논리적으로 완전 격리하고, 본문 내부에 깨짐 없는 정적 이미지 자산(Asset)을 무손실 매핑할 수 있는 독립형 정보 아키텍처(Information Architecture) 구축을 목표로 합니다.&lt;/p&gt;&#xA;&lt;p&gt;## 2. 디렉터리 기반 라우팅 설계 (Directory-based Routing)&lt;/p&gt;&#xA;&lt;p&gt;Hugo 프레임워크의 엄격한 데이터 스키마 규칙을 준수하여, &lt;code&gt;content&lt;/code&gt; 부모 보관함 하위에 독립된 서브 디렉터리를 생성함으로써 물리적·논리적 라우팅 경로를 분리했습니다.&lt;/p&gt;</description>
+				<description>&lt;h2 id=&#34;1-카테고리를-나눈-이유&#34;&gt;1. 카테고리를 나눈 이유&lt;/h2&gt;&#xA;&lt;p&gt;블로그에 글을 쓰다 보니, 개발을 공부한 &amp;lsquo;기술 기록&amp;rsquo;과 평범한 일상을 적은 &amp;lsquo;삶의 기록&amp;rsquo;이 한곳에 섞여 있는 게 보기 불편했습니다. 이 두 가지를 깔끔하게 분리하고, 글 중간에 사진도 예쁘게 넣고 싶어서 블로그 구조를 바꿔보았습니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;2-폴더를-나누면-카테고리가-됩니다&#34;&gt;2. 폴더를 나누면 카테고리가 됩니다&lt;/h2&gt;&#xA;&lt;p&gt;Hugo 블로그는 폴더를 나누는 것만으로도 인터넷 주소가 분리됩니다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;content/tech/&lt;/code&gt;: 기술 관련 글을 모아두는 곳&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;content/life/&lt;/code&gt;: 일상 에세이를 모아두는 곳&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;3-상단-메뉴바에-버튼-만들기&#34;&gt;3. 상단 메뉴바에 버튼 만들기&lt;/h2&gt;&#xA;&lt;p&gt;카테고리를 나눴으니 사람들이 클릭할 수 있게 메뉴 버튼을 만들어야 합니다. 블로그 전체 설정을 담당하는 &lt;code&gt;hugo.toml&lt;/code&gt; 파일 맨 밑에 아래 코드를 추가했습니다.&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>Git Submodule 에러와 구글 애널리틱스 연동 트러블슈팅기</title>
+				<title>Git Submodule 에러와 구글 애널리틱스 연동 해결기</title>
 				<link>https://example.org/tech/my-first-troubleshooting/</link>
 				<pubDate>Tue, 26 May 2026 22:15:48 +0900</pubDate>
 				<guid>https://example.org/tech/my-first-troubleshooting/</guid>
-				<description>&lt;p&gt;## 1. 문제 상황 (Background)&lt;/p&gt;&#xA;&lt;p&gt;Hugo를 활용해 GitHub Pages 블로그를 구축하고 구글 애널리틱스를 연동하는 과정에서, Git Submodule 명령어가 거부되고 &lt;code&gt;Repository not found&lt;/code&gt; 및 &lt;code&gt;A git directory for &#39;public&#39; is found locally&lt;/code&gt; 등의 연쇄적인 에러를 마주했습니다.&lt;/p&gt;&#xA;&lt;p&gt;## 2. 원인 분석 (Root Cause)&lt;/p&gt;&#xA;&lt;p&gt;* **경로 및 동기화 에러:** Windows의 OneDrive 및 한글 경로가 포함된 바탕화면은 CLI 도구와 충돌을 유발했습니다.&lt;/p&gt;&#xA;&lt;p&gt;* **식별자 불일치:** GitHub 저장소 생성 시 &lt;code&gt;xoxo787.github.io&lt;/code&gt; 규격을 지키지 않고 &lt;code&gt;github.io&lt;/code&gt;로 잘못 생성하여 터미널이 대상을 찾지 못했습니다.&lt;/p&gt;</description>
+				<description>&lt;h2 id=&#34;1-멘붕의-시작&#34;&gt;1. 멘붕의 시작&lt;/h2&gt;&#xA;&lt;p&gt;블로그에 구글 애널리틱스를 달아서 방문자를 확인해 보려다가 에러 파티를 만났습니다. 터미널 창에 &lt;code&gt;Repository not found&lt;/code&gt; 같은 무서운 빨간 글씨들이 쏟아지고 배포가 멈췄을 땐 정말 당황했죠. 하지만 천천히 원인을 찾고 해결해 나간 과정을 기록해 봅니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;2-도대체-왜-그랬을까&#34;&gt;2. 도대체 왜 그랬을까?&lt;/h2&gt;&#xA;&lt;p&gt;찬찬히 살펴보니 제가 놓친 사소한 실수 세 가지가 겹쳐 있었습니다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;폴더 경로 문제:&lt;/strong&gt; 윈도우 바탕화면(한글 경로와 클라우드 연동)에서 작업하다 보니 프로그램들이 파일 위치를 잘 못 찾고 엉켰습니다.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;주소 오타:&lt;/strong&gt; 깃허브 저장소를 만들 때 &lt;code&gt;내아이디.github.io&lt;/code&gt;라고 정확히 써야 하는데, 실수로 &lt;code&gt;github.io&lt;/code&gt;라고만 적는 바람에 터미널이 길을 잃었습니다.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;꼬여버린 순서:&lt;/strong&gt; 깃허브 웹사이트에서 &lt;code&gt;README.md&lt;/code&gt; 파일을 먼저 만들어버린 탓에, 내 컴퓨터와 인터넷 서버의 파일 순서가 어긋나서 밀어올리기(push)가 완전히 막혀버렸습니다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;3-이렇게-해결했습니다&#34;&gt;3. 이렇게 해결했습니다!&lt;/h2&gt;&#xA;&lt;p&gt;작업 폴더를 윈도우의 가장 깔끔한 영문 경로(&lt;code&gt;C:\workspace&lt;/code&gt;)로 옮기고, 꼬인 파일들을 하나씩 정리했습니다.&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
